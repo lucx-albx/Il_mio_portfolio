@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portfolio | Alba Luca - About</title>
+
+    <link rel="icon" href="./img/me.ico" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous'>
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body onload="carica_impostazioni()">
+    <div class="container-fluid">
+
+        <!-- Inizio navbar -->
+        <div class="row mia-navbar fixed-top">
+            <div class="col-xl-3 col-lg-3 col-md-3 col-6 nome-text d-flex justify-content-start align-items-center">
+                <a class="pointer" href="./index.html" style="color:white">😉 Luca</a>
+            </div>
+
+            <div class="col-xl-1 col-lg-1 col-md-2 d-flex justify-content-center align-items-center visible-pc" onclick="evidenzia(this)">
+                <a class="pointer home-text" href="./index.html">Home</a>
+            </div>
+
+            <div class="col-xl-1 col-lg-1 col-md-2 d-flex justify-content-center align-items-center visible-pc" onclick="evidenzia(this)">
+                <a class="pointer progetti-text" href="./progetti.html">Progetti</a>
+            </div>
+
+            <div class="col-xl-1 col-lg-1 col-md-2 d-flex justify-content-center align-items-center visible-pc" onclick="evidenzia(this)">
+                <a class="pointer about-text" href="./about.html">About</a>
+            </div>
+
+            <div class="col-xl-5 col-lg-5 col-md-2 loghi d-flex justify-content-end align-items-center visible-pc">
+                <a class="pointer" href="https://www.instagram.com/alba_luca_/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="30" width="30" viewBox="-19.5036 -32.49725 169.0312 194.9835"><defs><radialGradient fy="578.088" fx="158.429" gradientTransform="matrix(0 -1.98198 1.8439 0 -1031.399 454.004)" gradientUnits="userSpaceOnUse" xlink:href="#a" r="65" cy="578.088" cx="158.429" id="c"/><radialGradient fy="473.455" fx="147.694" gradientTransform="matrix(.17394 .86872 -3.5818 .71718 1648.351 -458.493)" gradientUnits="userSpaceOnUse" xlink:href="#b" r="65" cy="473.455" cx="147.694" id="d"/><linearGradient id="b"><stop stop-color="#3771c8" offset="0"/><stop offset=".128" stop-color="#3771c8"/><stop stop-opacity="0" stop-color="#60f" offset="1"/></linearGradient><linearGradient id="a"><stop stop-color="#fd5" offset="0"/><stop stop-color="#fd5" offset=".1"/><stop stop-color="#ff543e" offset=".5"/><stop stop-color="#c837ab" offset="1"/></linearGradient></defs><path d="M65.033 0C37.891 0 29.953.028 28.41.156c-5.57.463-9.036 1.34-12.812 3.22-2.91 1.445-5.205 3.12-7.47 5.468-4.125 4.282-6.625 9.55-7.53 15.812-.44 3.04-.568 3.66-.594 19.188-.01 5.176 0 11.988 0 21.125 0 27.12.03 35.05.16 36.59.45 5.42 1.3 8.83 3.1 12.56 3.44 7.14 10.01 12.5 17.75 14.5 2.68.69 5.64 1.07 9.44 1.25 1.61.07 18.02.12 34.44.12 16.42 0 32.84-.02 34.41-.1 4.4-.207 6.955-.55 9.78-1.28a27.22 27.22 0 0017.75-14.53c1.765-3.64 2.66-7.18 3.065-12.317.088-1.12.125-18.977.125-36.81 0-17.836-.04-35.66-.128-36.78-.41-5.22-1.305-8.73-3.127-12.44-1.495-3.037-3.155-5.305-5.565-7.624-4.3-4.108-9.56-6.608-15.829-7.512C102.338.157 101.733.027 86.193 0z" fill="url(#c)"/><path d="M65.033 0C37.891 0 29.953.028 28.41.156c-5.57.463-9.036 1.34-12.812 3.22-2.91 1.445-5.205 3.12-7.47 5.468-4.125 4.282-6.625 9.55-7.53 15.812-.44 3.04-.568 3.66-.594 19.188-.01 5.176 0 11.988 0 21.125 0 27.12.03 35.05.16 36.59.45 5.42 1.3 8.83 3.1 12.56 3.44 7.14 10.01 12.5 17.75 14.5 2.68.69 5.64 1.07 9.44 1.25 1.61.07 18.02.12 34.44.12 16.42 0 32.84-.02 34.41-.1 4.4-.207 6.955-.55 9.78-1.28a27.22 27.22 0 0017.75-14.53c1.765-3.64 2.66-7.18 3.065-12.317.088-1.12.125-18.977.125-36.81 0-17.836-.04-35.66-.128-36.78-.41-5.22-1.305-8.73-3.127-12.44-1.495-3.037-3.155-5.305-5.565-7.624-4.3-4.108-9.56-6.608-15.829-7.512C102.338.157 101.733.027 86.193 0z" fill="url(#d)"/><path d="M65.003 17c-13.036 0-14.672.057-19.792.29-5.11.234-8.598 1.043-11.65 2.23-3.157 1.226-5.835 2.866-8.503 5.535-2.67 2.668-4.31 5.346-5.54 8.502-1.19 3.053-2 6.542-2.23 11.65C17.06 50.327 17 51.964 17 65s.058 14.667.29 19.787c.235 5.11 1.044 8.598 2.23 11.65 1.227 3.157 2.867 5.835 5.536 8.503 2.667 2.67 5.345 4.314 8.5 5.54 3.054 1.187 6.543 1.996 11.652 2.23 5.12.233 6.755.29 19.79.29 13.037 0 14.668-.057 19.788-.29 5.11-.234 8.602-1.043 11.656-2.23 3.156-1.226 5.83-2.87 8.497-5.54 2.67-2.668 4.31-5.346 5.54-8.502 1.18-3.053 1.99-6.542 2.23-11.65.23-5.12.29-6.752.29-19.788 0-13.036-.06-14.672-.29-19.792-.24-5.11-1.05-8.598-2.23-11.65-1.23-3.157-2.87-5.835-5.54-8.503-2.67-2.67-5.34-4.31-8.5-5.535-3.06-1.187-6.55-1.996-11.66-2.23-5.12-.233-6.75-.29-19.79-.29zm-4.306 8.65c1.278-.002 2.704 0 4.306 0 12.816 0 14.335.046 19.396.276 4.68.214 7.22.996 8.912 1.653 2.24.87 3.837 1.91 5.516 3.59 1.68 1.68 2.72 3.28 3.592 5.52.657 1.69 1.44 4.23 1.653 8.91.23 5.06.28 6.58.28 19.39s-.05 14.33-.28 19.39c-.214 4.68-.996 7.22-1.653 8.91-.87 2.24-1.912 3.835-3.592 5.514-1.68 1.68-3.275 2.72-5.516 3.59-1.69.66-4.232 1.44-8.912 1.654-5.06.23-6.58.28-19.396.28-12.817 0-14.336-.05-19.396-.28-4.68-.216-7.22-.998-8.913-1.655-2.24-.87-3.84-1.91-5.52-3.59-1.68-1.68-2.72-3.276-3.592-5.517-.657-1.69-1.44-4.23-1.653-8.91-.23-5.06-.276-6.58-.276-19.398s.046-14.33.276-19.39c.214-4.68.996-7.22 1.653-8.912.87-2.24 1.912-3.84 3.592-5.52 1.68-1.68 3.28-2.72 5.52-3.592 1.692-.66 4.233-1.44 8.913-1.655 4.428-.2 6.144-.26 15.09-.27zm29.928 7.97a5.76 5.76 0 105.76 5.758c0-3.18-2.58-5.76-5.76-5.76zm-25.622 6.73c-13.613 0-24.65 11.037-24.65 24.65 0 13.613 11.037 24.645 24.65 24.645C78.616 89.645 89.65 78.613 89.65 65S78.615 40.35 65.002 40.35zm0 8.65c8.836 0 16 7.163 16 16 0 8.836-7.164 16-16 16-8.837 0-16-7.164-16-16 0-8.837 7.163-16 16-16z" fill="#fff"/></svg></a>
+            </div>
+
+            <div class="col-xl-1 col-lg-1 col-md-1 loghi d-flex justify-content-start align-items-center visible-pc">
+                <a class="pointer" href="https://github.com/lucx-albx" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" height="30" width="30" viewBox="-74.4 -120.90175 644.8 725.4105"><path d="M165.9 389.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2 .6-2-1.3-4.3-4.3-5.2-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 0C106.1 0 0 105.3 0 244c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5 21.3 0 42.8 2.9 62.8 8.5 0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 449.8 496 354.9 496 244 496 105.3 383.5 0 244.8 0zM97.2 344.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></a>
+            </div>
+
+            <div class="col-6 d-flex justify-content-end align-items-center visible-tel">
+                <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open" onclick="apri_menu()">
+                <label class="menu-open-button" for="menu-open">
+                    <span class="lines line-1"></span>
+                    <span class="lines line-2"></span>
+                    <span class="lines line-3"></span>
+                </label>
+            </div>
+        </div>
+
+        <div class="row justify-content-center tipi-sezioni not-visible">
+            <div class="col-12 d-flex justify-content-start"><a class="pointer ml-2" href="./index.html"><h5>Home</h5></a></div>
+            <div class="col-12 d-flex justify-content-start"><a class="pointer ml-2" href="./progetti.html"><h5>Progetti</h5></a></div>
+            <div class="col-12 d-flex justify-content-start"><a class="pointer ml-2" href="./about.html"><h5>About</h5></a></div>
+            <div class="col-12 d-flex justify-content-start"><a class="pointer ml-2" href="https://www.instagram.com/alba_luca_/" target="_blank"><h5>Instagram</h5></a></div>
+            <div class="col-12 d-flex justify-content-start"><a class="pointer ml-2" href="https://github.com/lucx-albx" target="_blank"><h5> Github</h5></a></div>
+        </div>
+        <!-- Fine navbar -->
+
+
+
+        <!-- Inizio sotto navbar -->
+        <div class="row sotto-navbar justify-content-center align-items-center">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-12 chi-sono order-0 mt-4" data-aos="fade-right">
+                <div class="posiziona-verticale-centrale desc">
+                    <h2 class="sotto-titolo">Dunque</h2>
+                    <h1 class="title-name text-xl-center text-lg-center text-md-center">Ma chi sono?</h1>
+                    <div class="yellow-line"></div>
+                    <div class="col-12 testo text-xl-center text-lg-center text-md-center">
+                        Io sono Luca ho 18 e nutro la passione per la programmazione ed in questa sezione 
+                        vi parlerò meglio di me e delle mie skill nell'ambito dello sviluppo e non solo!
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-4 col-md-12 col-12 d-flex justify-content-center align-items-center order-sm-3 order-xl-1 order-lg-1 order-md-2 order-sm-2 order-2 mt-3" data-aos="fade-down">
+                <img src="./img/me.png" alt="Immagine di me" class="img-fluid">
+            </div>
+
+            <div class="col-xl-4 col-lg-4 col-md-6 col-12 order-xl-2 order-lg-2 order-md-1 order-sm-1 order-1 mt-4" data-aos="fade-left">
+                <div class="posiziona-verticale-centrale ser">
+                    <h4 class="sotto-titolo">Servizi</h4>
+                    <div class="col-12 testo text-xl-center text-lg-center text-md-center">
+                        Porto la tua visione online: 
+                        dal concept al web. Scopri di 
+                        più sul mio lavoro esplorando 
+                        i miei canali social e scrivendomi
+                        in privato! 
+                    </div>
+                    <h4 class="more mt-2 d-flex justify-content-start align-items-center">Scopri di più <svg class="centra-freccia" height="25" width="30" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" stroke-linejoin="round" stroke-linecap="round"></path></svg></h4>
+                    
+                    <div class="row ml-1 mt-1">
+                        <a class="social mr-3 pointer" href="https://www.instagram.com/alba_luca_/" target="_blank"><svg class="posizione" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="30" width="30" viewBox="-19.5036 -32.49725 169.0312 194.9835"><defs><radialGradient fy="578.088" fx="158.429" gradientTransform="matrix(0 -1.98198 1.8439 0 -1031.399 454.004)" gradientUnits="userSpaceOnUse" xlink:href="#a" r="65" cy="578.088" cx="158.429" id="c"/><radialGradient fy="473.455" fx="147.694" gradientTransform="matrix(.17394 .86872 -3.5818 .71718 1648.351 -458.493)" gradientUnits="userSpaceOnUse" xlink:href="#b" r="65" cy="473.455" cx="147.694" id="d"/><linearGradient id="b"><stop stop-color="#3771c8" offset="0"/><stop offset=".128" stop-color="#3771c8"/><stop stop-opacity="0" stop-color="#60f" offset="1"/></linearGradient><linearGradient id="a"><stop stop-color="#fd5" offset="0"/><stop stop-color="#fd5" offset=".1"/><stop stop-color="#ff543e" offset=".5"/><stop stop-color="#c837ab" offset="1"/></linearGradient></defs><path d="M65.033 0C37.891 0 29.953.028 28.41.156c-5.57.463-9.036 1.34-12.812 3.22-2.91 1.445-5.205 3.12-7.47 5.468-4.125 4.282-6.625 9.55-7.53 15.812-.44 3.04-.568 3.66-.594 19.188-.01 5.176 0 11.988 0 21.125 0 27.12.03 35.05.16 36.59.45 5.42 1.3 8.83 3.1 12.56 3.44 7.14 10.01 12.5 17.75 14.5 2.68.69 5.64 1.07 9.44 1.25 1.61.07 18.02.12 34.44.12 16.42 0 32.84-.02 34.41-.1 4.4-.207 6.955-.55 9.78-1.28a27.22 27.22 0 0017.75-14.53c1.765-3.64 2.66-7.18 3.065-12.317.088-1.12.125-18.977.125-36.81 0-17.836-.04-35.66-.128-36.78-.41-5.22-1.305-8.73-3.127-12.44-1.495-3.037-3.155-5.305-5.565-7.624-4.3-4.108-9.56-6.608-15.829-7.512C102.338.157 101.733.027 86.193 0z" fill="url(#c)"/><path d="M65.033 0C37.891 0 29.953.028 28.41.156c-5.57.463-9.036 1.34-12.812 3.22-2.91 1.445-5.205 3.12-7.47 5.468-4.125 4.282-6.625 9.55-7.53 15.812-.44 3.04-.568 3.66-.594 19.188-.01 5.176 0 11.988 0 21.125 0 27.12.03 35.05.16 36.59.45 5.42 1.3 8.83 3.1 12.56 3.44 7.14 10.01 12.5 17.75 14.5 2.68.69 5.64 1.07 9.44 1.25 1.61.07 18.02.12 34.44.12 16.42 0 32.84-.02 34.41-.1 4.4-.207 6.955-.55 9.78-1.28a27.22 27.22 0 0017.75-14.53c1.765-3.64 2.66-7.18 3.065-12.317.088-1.12.125-18.977.125-36.81 0-17.836-.04-35.66-.128-36.78-.41-5.22-1.305-8.73-3.127-12.44-1.495-3.037-3.155-5.305-5.565-7.624-4.3-4.108-9.56-6.608-15.829-7.512C102.338.157 101.733.027 86.193 0z" fill="url(#d)"/><path d="M65.003 17c-13.036 0-14.672.057-19.792.29-5.11.234-8.598 1.043-11.65 2.23-3.157 1.226-5.835 2.866-8.503 5.535-2.67 2.668-4.31 5.346-5.54 8.502-1.19 3.053-2 6.542-2.23 11.65C17.06 50.327 17 51.964 17 65s.058 14.667.29 19.787c.235 5.11 1.044 8.598 2.23 11.65 1.227 3.157 2.867 5.835 5.536 8.503 2.667 2.67 5.345 4.314 8.5 5.54 3.054 1.187 6.543 1.996 11.652 2.23 5.12.233 6.755.29 19.79.29 13.037 0 14.668-.057 19.788-.29 5.11-.234 8.602-1.043 11.656-2.23 3.156-1.226 5.83-2.87 8.497-5.54 2.67-2.668 4.31-5.346 5.54-8.502 1.18-3.053 1.99-6.542 2.23-11.65.23-5.12.29-6.752.29-19.788 0-13.036-.06-14.672-.29-19.792-.24-5.11-1.05-8.598-2.23-11.65-1.23-3.157-2.87-5.835-5.54-8.503-2.67-2.67-5.34-4.31-8.5-5.535-3.06-1.187-6.55-1.996-11.66-2.23-5.12-.233-6.75-.29-19.79-.29zm-4.306 8.65c1.278-.002 2.704 0 4.306 0 12.816 0 14.335.046 19.396.276 4.68.214 7.22.996 8.912 1.653 2.24.87 3.837 1.91 5.516 3.59 1.68 1.68 2.72 3.28 3.592 5.52.657 1.69 1.44 4.23 1.653 8.91.23 5.06.28 6.58.28 19.39s-.05 14.33-.28 19.39c-.214 4.68-.996 7.22-1.653 8.91-.87 2.24-1.912 3.835-3.592 5.514-1.68 1.68-3.275 2.72-5.516 3.59-1.69.66-4.232 1.44-8.912 1.654-5.06.23-6.58.28-19.396.28-12.817 0-14.336-.05-19.396-.28-4.68-.216-7.22-.998-8.913-1.655-2.24-.87-3.84-1.91-5.52-3.59-1.68-1.68-2.72-3.276-3.592-5.517-.657-1.69-1.44-4.23-1.653-8.91-.23-5.06-.276-6.58-.276-19.398s.046-14.33.276-19.39c.214-4.68.996-7.22 1.653-8.912.87-2.24 1.912-3.84 3.592-5.52 1.68-1.68 3.28-2.72 5.52-3.592 1.692-.66 4.233-1.44 8.913-1.655 4.428-.2 6.144-.26 15.09-.27zm29.928 7.97a5.76 5.76 0 105.76 5.758c0-3.18-2.58-5.76-5.76-5.76zm-25.622 6.73c-13.613 0-24.65 11.037-24.65 24.65 0 13.613 11.037 24.645 24.65 24.645C78.616 89.645 89.65 78.613 89.65 65S78.615 40.35 65.002 40.35zm0 8.65c8.836 0 16 7.163 16 16 0 8.836-7.164 16-16 16-8.837 0-16-7.164-16-16 0-8.837 7.163-16 16-16z" fill="#fff"/></svg></a>
+                        <a class="social pointer" href="https://github.com/lucx-albx" target="_blank"><svg class="posizione" xmlns="http://www.w3.org/2000/svg" height="30" width="30" viewBox="-74.4 -120.90175 644.8 725.4105"><path d="M165.9 389.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2 .6-2-1.3-4.3-4.3-5.2-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 0C106.1 0 0 105.3 0 244c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5 21.3 0 42.8 2.9 62.8 8.5 0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 449.8 496 354.9 496 244 496 105.3 383.5 0 244.8 0zM97.2 344.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Fine sotto navbar -->
+
+
+
+        <!-- Inizio blocco skill princiapli -->
+        <div class="row justify-content-center" data-aos="fade-up">
+            <div class="col-11 blocco-skill-principali">
+                <div class="row justify-content-center container-blocchi">
+                    <div class="col-2 d-flex justify-content-center align-items-center blocchi-skill">
+                        <img src="./img/javascript_logo.png" height="30" width="30" alt="html logo"><strong class="solo-loghi">&nbsp PROGRAMMAZIONE</strong>
+                    </div>
+
+                    <div class="col-2 d-flex justify-content-center align-items-center blocchi-skill">
+                        <img src="./img/Ai_Logo.png" height="30" width="30" alt="html logo"><strong class="solo-loghi">&nbsp AI</strong>
+                    </div>
+
+                    <div class="col-2 d-flex justify-content-center align-items-center blocchi-skill">
+                        <img src="./img/Montaggio_Logo.png" height="30" width="30" alt="html logo"><strong class="solo-loghi">&nbsp MONTAGGIO</strong>
+                    </div>
+
+                    <div class="col-2 d-flex justify-content-center align-items-center blocchi-skill">
+                        <img src="./img/Sicurezza_Logo.png" height="30" width="35" alt="html logo"><strong class="solo-loghi">&nbsp SICUREZZA</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fine blocco skill princiapli -->
+
+
+
+        <!-- Inizio body sito -->
+        <div class="row justify-content-center mt-6 contenitore-about">
+            <div class="col-11">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="title-name" data-aos-offset="100" data-aos="fade-down-right">About me</h2> 
+                        <div class="yellow-line leave-margin" data-aos-offset="50" data-aos="fade-down-right"></div>
+
+                        <p data-aos-offset="10" data-aos="fade-right">
+                            Sono Alba Luca Francesco, ho attualmente 18 anni (nel 2023), e sono nato il 19 luglio 2005 a Bietigheim-Bissingen, in Germania. 
+                            La mia nazionalità è italiana e sono fiero di condividere con voi alcuni aspetti della mia personalità e delle mie passioni.
+                            Fin da giovane, ho coltivato una passione profonda per la programmazione, un mondo in cui riesco a esprimere la mia creatività 
+                            e a sfidare costantemente me stesso. Tuttavia, la mia curiosità non si limita solo a questo campo, in quanto nutro un forte 
+                            interesse anche per l'intelligenza artificiale, che trovo affascinante per le sue infinite potenzialità nel plasmare il futuro.
+                            Oltre a immergermi nell'universo della tecnologia, trovo grande soddisfazione nell'assemblaggio di computer, un'attività che mi 
+                            permette di comprendere a fondo il funzionamento interno delle macchine e di personalizzarle in base alle mie esigenze. La sicurezza 
+                            informatica è un'altra sfera che mi appassiona, poiché mi spinge a essere sempre un passo avanti nel proteggere le informazioni sensibili 
+                            e garantire la privacy. Tuttavia, la mia vita non è solo digitale. Ho una profonda affinità per i viaggi, che finora mi hanno portato a 
+                            esplorare diverse parti dell'Europa. Sogno di ampliare i miei orizzonti e di scoprire luoghi nuovi oltre i confini europei. 
+                            Questa curiosità mi spinge a imparare costantemente e ad adattarmi a diverse situazioni.
+                            In conclusione, sono un giovane italiano con una passione intramontabile per la tecnologia, la programmazione e l'intelligenza artificiale. 
+                            Sfrutto ogni opportunità per ampliare le mie conoscenze e le mie esperienze, sia nel mondo virtuale che in quello reale. Non vedo l'ora di 
+                            vedere dove il mio percorso mi porterà successivamente, esplorando le molteplici sfaccettature del mondo che mi circonda.
+                        </p>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-4 col-md-4 col-12 mt-3" data-aos-offset="100" data-aos="zoom-in">
+                        <img src="./img/Me_sfondo.png" alt="Immagine di me con sfondo" class="img-thumbnail">
+                    </div>
+
+                    <div class="col-xl-9 col-lg-8 col-md-8 col-12 mt-3" id="animazionePercentuale" data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease-in-sine">
+                        <div class="row">
+                            <div class="col-12">
+                                <h2 class="title-name">Skills Principali</h2>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="row">
+
+                                    
+                                    <div class="col-xl-10 col-lg-9 col-md-9 col-sm-10 col-12 mt-3">
+                                        <div class="percentuale-frame">
+                                            <div class="row">
+                                                <div class="col-6 d-flex justify-content-start">
+                                                    <strong>HTML</strong> 
+                                                </div>
+                        
+                                                <div class="col-6 d-flex justify-content-end">
+                                                    <strong>100%</strong> 
+                                                </div>
+                                            </div>
+                                            <div class="barra"></div>
+                                            <div class="completamento1"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-10 col-lg-9 col-md-9 col-sm-10 col-12 mt-3">
+                                        <div class="percentuale-frame">
+                                            <div class="row">
+                                                <div class="col-6 d-flex justify-content-start">
+                                                    <strong>PYTHON</strong> 
+                                                </div>
+                        
+                                                <div class="col-6 d-flex justify-content-end">
+                                                    <strong>100%</strong> 
+                                                </div>
+                                            </div>
+                                            <div class="barra"></div>
+                                            <div class="completamento5"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-10 col-lg-9 col-md-9 col-sm-10 col-12 mt-3">
+                                        <div class="percentuale-frame">
+                                            <div class="row">
+                                                <div class="col-6 d-flex justify-content-start">
+                                                    <strong>REACT</strong> 
+                                                </div>
+                        
+                                                <div class="col-6 d-flex justify-content-end">
+                                                    <strong>90%</strong> 
+                                                </div>
+                                            </div>
+                                            <div class="barra"></div>
+                                            <div class="completamento4"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-10 col-lg-9 col-md-9 col-sm-10 col-12 mt-3">
+                                        <div class="percentuale-frame">
+                                            <div class="row">
+                                                <div class="col-6 d-flex justify-content-start">
+                                                    <strong>CSS</strong> 
+                                                </div>
+                        
+                                                <div class="col-6 d-flex justify-content-end">
+                                                    <strong>80%</strong> 
+                                                </div>
+                                            </div>
+                                            <div class="barra"></div>
+                                            <div class="completamento2"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-10 col-lg-9 col-md-9 col-sm-10 col-12 mt-3">
+                                        <div class="percentuale-frame">
+                                            <div class="row">
+                                                <div class="col-6 d-flex justify-content-start">
+                                                    <strong>JAVASCRIPT</strong> 
+                                                </div>
+                        
+                                                <div class="col-6 d-flex justify-content-end">
+                                                    <strong>80%</strong> 
+                                                </div>
+                                            </div>
+                                            <div class="barra"></div>
+                                            <div class="completamento3"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-10 col-lg-9 col-md-9 col-sm-10 col-12 mt-3">
+                                        <div class="percentuale-frame">
+                                            <div class="row">
+                                                <div class="col-6 d-flex justify-content-start">
+                                                    <strong>BASH</strong> 
+                                                </div>
+                        
+                                                <div class="col-6 d-flex justify-content-end">
+                                                    <strong>70%</strong> 
+                                                </div>
+                                            </div>
+                                            <div class="barra"></div>
+                                            <div class="completamento7"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-10 col-lg-9 col-md-9 col-sm-10 col-12 mt-3">
+                                        <div class="percentuale-frame">
+                                            <div class="row">
+                                                <div class="col-6 d-flex justify-content-start">
+                                                    <strong>C</strong> 
+                                                </div>
+                        
+                                                <div class="col-6 d-flex justify-content-end">
+                                                    <strong>60%</strong> 
+                                                </div>
+                                            </div>
+                                            <div class="barra"></div>
+                                            <div class="completamento6"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-10 col-lg-9 col-md-9 col-sm-10 col-12 mt-3">
+                                        <div class="percentuale-frame">
+                                            <div class="row">
+                                                <div class="col-6 d-flex justify-content-start">
+                                                    <strong>FIREBASE</strong> 
+                                                </div>
+                        
+                                                <div class="col-6 d-flex justify-content-end">
+                                                    <strong>55%</strong> 
+                                                </div>
+                                            </div>
+                                            <div class="barra"></div>
+                                            <div class="completamento9"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-10 col-lg-9 col-md-9 col-sm-10 col-12 mt-3">
+                                        <div class="percentuale-frame">
+                                            <div class="row">
+                                                <div class="col-6 d-flex justify-content-start">
+                                                    <strong>SQL</strong> 
+                                                </div>
+                        
+                                                <div class="col-6 d-flex justify-content-end">
+                                                    <strong>40%</strong> 
+                                                </div>
+                                            </div>
+                                            <div class="barra"></div>
+                                            <div class="completamento8"></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                
+            </div>
+
+        </div>
+        <!-- Fine body sito -->
+
+
+
+        <!-- INIZIO BOTTONE SCROLLA SU -->
+        <div id="scrollToTopBtn" onclick="scrollToTop()">&#8593;</div>
+        <!-- FINE BOTTONE SCROLLA SU -->
+
+
+
+        <!-- Inizio footer -->
+        <div class="row justify-content-around contenitore-mio-footer mt-6">
+            <div class="col-xl-5 col-lg-5 col-md-5 col-11 d-flex justify-content-center">
+                <div>
+                    <h2 class="sotto-titolo">Le mie conoscenze</h2>
+                    <p>
+                        Le mie competenze includono una vasta gamma di linguaggi e tecnologie, 
+                        tra cui: C, Python, Bash, HTML, JavaScript, Bootstrap, React, MongoDb, SQL, Firebase,
+                        Github, B4J, B4A, Java, Json, XML, Node, Linux e utilizzo di API. Inoltre, ho esperienza nell'utilizzo 
+                        di strumenti come Packet Tracer e competenze nel montaggio di PC.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-xl-5 col-lg-5 col-md-5 col-11 d-flex justify-content-center">
+                <div>
+                    <h2 class="sotto-titolo">La mia passione</h2>
+                    <p>
+                        Attraverso questo sito, intendo manifestare la profonda passione che nutro
+                         per l'informatica, con l'obiettivo di arricchire l'esperienza dell'utente 
+                         finale, donando spensieratezza e soddisfazione. Vi ringrazio sinceramente
+                          per aver dedicato del tempo alla visita del mio spazio digitale e, chissà, 
+                          potremmo anche avere l'opportunità di connetterci in futuro. Confido che 
+                          sia emersa chiaramente anche la dimostrazione delle mie competenze. 💪
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center crediti-finali">
+            <strong>Sito portfolio di Alba Luca Francesco</strong>
+        </div>
+        <!-- Fine footer -->
+
+    </div>
+
+    <script src="./script/index.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init()</script>
+    <script src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous'></script>
+    <script src='https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous'></script>
+    <script src='https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous'></script>
+</body>
+</html>

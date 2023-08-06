@@ -1,0 +1,522 @@
+/* 
+#363543 
+#2e2c39
+#282834
+*/
+
+
+/* Proprietà css generali */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    background-color: #282834;
+    overflow-x: hidden!important;
+    scroll-behavior: smooth;
+}
+
+a, a:hover{
+    text-decoration: none!important;
+    color: #99a1aa;
+}
+
+.mt-6{
+    margin-top: 75px;
+}
+
+.centra-freccia{
+    margin-top: 0.28rem;
+    cursor: pointer;
+}
+/* Proprietà css generali */
+
+
+
+/* Inizio scrollbar per chrome */
+::-webkit-scrollbar {
+	width: 8px;
+	background-color: transparent;
+}
+  
+::-webkit-scrollbar-thumb {
+	background-color: #99a1aa;
+    opacity: 0.1;
+	border-radius: 7px;
+}
+  
+::-webkit-scrollbar-corner{
+	border-radius: 7px;
+    opacity: 0.1;
+	background-color: #99a1aa;
+}
+/* Fine scrollbar per chrome */
+
+
+
+/* Inizio bottone navbar */
+.mia-navbar{
+    background-color: #363543;
+    color: #99a1aa;
+    padding: 20px;
+}
+
+.nome-text{
+    font-size: larger;
+    font-weight: bold;
+    color: white;
+}
+
+.home-text, .about-text, .progetti-text{
+    font-size: large;
+    font-weight: 400
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.loghi{
+    margin-top: 0.3%;
+}
+
+.not-visible{
+    display: none;
+}
+
+.tipi-sezioni{
+    height: 185px;
+    position: fixed;
+    width: 100%;
+    background-color: #282834;
+    z-index: 99;
+}
+
+@media only screen and (max-width: 768px) {
+    .mia-navbar{
+        background-color: #282834;
+    }
+
+    .visible-pc {
+        display: none!important;
+    }
+
+    .visible-tel{
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .visible-tel{
+        display: none!important;
+    }
+}
+
+
+.menu-open-button {
+    width: 80px;
+    height: 80px;
+    margin-top: 5%;
+    position: absolute;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 80px;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: -webkit-transform ease-out 200ms;
+    transition: -webkit-transform ease-out 200ms;
+    transition: transform ease-out 200ms;
+    cursor: pointer;
+}
+
+.menu-open {
+    display: none;
+}
+  
+.lines {
+    width: 25px;
+    height: 3px;
+    background: #596778;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -12.5px;
+    margin-top: -1.5px;
+    -webkit-transition: -webkit-transform 200ms;
+    transition: -webkit-transform 200ms;
+    transition: transform 200ms;
+}
+  
+.line-1 {
+    -webkit-transform: translate3d(0, -8px, 0);
+    transform: translate3d(0, -8px, 0);
+}
+  
+.line-2 {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+  
+.line-3 {
+    -webkit-transform: translate3d(0, 8px, 0);
+    transform: translate3d(0, 8px, 0);
+}
+  
+.menu-open:checked + .menu-open-button .line-1 {
+    -webkit-transform: translate3d(0, 0, 0) rotate(45deg);
+    transform: translate3d(0, 0, 0) rotate(45deg);
+}
+  
+.menu-open:checked + .menu-open-button .line-2 {
+    -webkit-transform: translate3d(0, 0, 0) scale(0.1, 1);
+    transform: translate3d(0, 0, 0) scale(0.1, 1);
+}
+  
+.menu-open:checked + .menu-open-button .line-3 {
+    -webkit-transform: translate3d(0, 0, 0) rotate(-45deg);
+    transform: translate3d(0, 0, 0) rotate(-45deg);
+}
+/* Fine bottone navbar */
+
+
+
+/* Inizio sotto navbar */
+.b{
+    border: 1px solid white;
+}
+
+.sotto-navbar{
+    background-color: #363543;
+    color: white;
+    padding: 100px 0px 60px 0px;
+}
+
+.title-name{
+    font-size: 50px;
+}
+
+.sotto-titolo{
+    color: #99a1aa;
+}
+
+.chi-sono{
+    z-index: 2;
+}
+
+.testo{
+    margin-left: -14px;
+}
+
+.immagine-me{
+    z-index: 3;
+}
+
+.yellow-line{
+    border: 2.5px solid #e2af27;
+    width: 170px;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+.posiziona-verticale-centrale{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.more{
+    color: #9a7115!important;
+}
+
+.social{
+    background-color: #42424e;
+    border-radius: 100%;
+    padding: 20px;
+    width: 50px;
+    height: 50px;
+}
+
+.posizione{
+    margin-top: -11px;
+    margin-left: -9.5px;
+}
+/* Fine sotto navbar */
+
+
+
+/* Inizio blocco skill principali */
+.blocco-skill-principali{
+    background-color: #403e52;
+    padding: 45px;
+    margin-top: -60px;
+    color: white;
+}
+
+.blocchi-skill{
+    background-color: #353547;
+    padding: 15px 25px;
+}
+
+.container-blocchi{
+    gap: 40px 80px;
+}
+
+@media only screen and (max-width: 1256px) {
+    .solo-loghi{
+        display: none!important;
+    }
+
+    .container-blocchi{
+        gap: 20px;
+    }
+}
+
+/* Fine blocco skill principali */
+
+
+
+/* Inizio corpo sito */
+.container-body-site{
+    color: white;
+}
+
+.testo-body{
+    color: #99a1aa;
+    font-size: 17px;
+}
+
+.titolo-body{
+    color: #d3992b;
+    font-size: 25px;
+}
+
+.title-name{
+    font-size: 35px;
+}
+
+.sposta-sinistra{
+    margin-left: -1.5%;
+}
+
+.centra-freccia-proj{
+    margin-top: -4%;
+}
+
+.freccia-proj{
+    color: yellow!important;
+}
+
+.freccia-proj:hover{
+    cursor: pointer;
+    color: #99a1aa!important;
+}
+
+.container-vislualizzatore-progetti{
+    gap: 20px 0px;
+}
+
+.sottolinea-progetti{
+    border-bottom: 1px solid #99a1aa;
+    padding: 10px;
+}
+
+.descrizione-progetto{
+    margin-left: -25px;
+}
+
+@media only screen and (max-width: 944px) {
+    .titolo-progetti{
+        font-size: 12px;
+    }
+}
+
+/* Fine corpo sito */
+
+
+
+/* Inizio footer */
+.contenitore-mio-footer{
+    background-color: #363543;
+    padding: 20px;
+    color: white;
+}
+
+.crediti-finali{
+    background-color: #403e52;
+    padding: 5px;
+    color: white;
+}
+/* Fine footer */
+
+
+
+/* Inzio body progetti */
+.container-progetti{
+    color: white;
+}
+
+.card-progetti{
+    background-color: #363543;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.contenitore-progetti-dev{
+    gap: 0px 35px;
+}
+
+.testo-progetti-tit{
+    color: #99a1aa;
+}
+/* Fine body progetti */
+
+
+
+/* Inizio body about */
+.contenitore-about{
+    color: white;
+}
+
+.leave-margin{
+    margin-top: -5px;
+}
+
+.barra{
+    background-color: #e8edf5;
+    width: 100%;
+    height: 6px;
+}
+
+.percentuale-frame{
+    color: #4668a2;
+}
+
+.completamento1, .completamento2, .completamento3, .completamento4, .completamento5, .completamento6, .completamento7, .completamento8, .completamento9 {
+    width: 0;
+    background-color: #4668a2;
+    height: 6px;
+    margin-top: -6px;
+    transition: width 3s ease;
+}
+
+.completamento1.animate {
+    animation: fillHtml 3s ease forwards;
+}
+
+.completamento2.animate {
+    animation: fillCss 3s ease forwards;
+}
+
+.completamento3.animate {
+    animation: fillJs 3s ease forwards;
+}
+
+.completamento4.animate {
+    animation: fillReact 3s ease forwards;
+}
+
+.completamento5.animate {
+    animation: fillPython 3s ease forwards;
+}
+
+.completamento6.animate {
+    animation: fillC 3s ease forwards;
+}
+
+.completamento7.animate {
+    animation: fillBash 3s ease forwards;
+}
+
+.completamento8.animate {
+    animation: fillSql 3s ease forwards;
+}
+
+.completamento9.animate {
+    animation: fillFirebase 3s ease forwards;
+}
+
+@keyframes fillHtml {
+    0% { width: 0; }
+    90% { width: 100%; }
+    100% { width: 100%; }
+}
+
+@keyframes fillCss {
+    0% { width: 0; }
+    80% { width: 80%; }
+    100% { width: 80%; }
+}
+
+@keyframes fillJs {
+    0% { width: 0; }
+    80% { width: 80%; }
+    100% { width: 80%; }
+}
+
+@keyframes fillReact {
+    0% { width: 0; }
+    90% { width: 90%; }
+    100% { width: 90%; }
+}
+
+@keyframes fillPython {
+    0% { width: 0; }
+    90% { width: 100%; }
+    100% { width: 100%; }
+}
+
+@keyframes fillC {
+    0% { width: 0; }
+    60% { width: 60%; }
+    100% { width: 60%; }
+}
+
+@keyframes fillBash {
+    0% { width: 0; }
+    70% { width: 70%; }
+    100% { width: 70%; }
+}
+
+@keyframes fillSql {
+    0% { width: 0; }
+    40% { width: 40%; }
+    100% { width: 40%; }
+}
+
+@keyframes fillFirebase {
+    0% { width: 0; }
+    55% { width: 55%; }
+    100% { width: 55%; }
+}
+/* Inizio body about */
+
+
+
+/* INIZIO BOTTONE SCROLLA SU */
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: #e8edf5;
+    color: #4668a2;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+#scrollToTopBtn:hover {
+    opacity: 1;
+}
+/* FINE BOTTONE SCROLLA SU */
