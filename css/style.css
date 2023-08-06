@@ -215,7 +215,7 @@ a, a:hover{
 }
 
 .yellow-line{
-    border: 2.5px solid #e2af27;
+    border-bottom: 3px solid #e2af27;
     width: 170px;
     margin-top: 2%;
     margin-bottom: 3%;
