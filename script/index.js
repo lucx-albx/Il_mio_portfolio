@@ -66,7 +66,7 @@ const evidenzia =(el)=>{
 
 const apri_menu =()=>{
     let controlla = document.querySelector(".tipi-sezioni")
-    let altezza = -130
+    let altezza = -120
 
     controlla.style.top = altezza + 'px'
 
@@ -81,7 +81,7 @@ const apri_menu =()=>{
         if (altezza === 68) {
             clearInterval(id)
         } else {
-            altezza++
+            altezza += 2
             controlla.style.top = altezza + 'px'
         }
     
