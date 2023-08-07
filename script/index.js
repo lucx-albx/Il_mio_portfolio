@@ -135,7 +135,7 @@ class card_progetti{
             )
     }
 
-    crea_python(nome, desc, link, percentuale){
+    crea_python(nome, desc, link){
         return (
             `<div class="col-xl-3 col-lg-3 col-md-5 col-10 card-progetti" data-aos="fade-right" data-aos-offset="10" data-aos-easing="ease-in-sine">
                     <h2 class="text-center testo-progetti-tit">${nome}</h2>
