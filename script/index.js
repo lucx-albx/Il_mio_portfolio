@@ -254,6 +254,13 @@ window.addEventListener('scroll', () => {
 
 })
 
+window.addEventListener('load', () => {
+    AOS.init({
+        duration: 750,
+        easing: "ease-in-out",
+        once: true,
+        mirror: false
+    })
+})
+
 carica_progetti()
-
-
