@@ -243,10 +243,10 @@ window.addEventListener('scroll', () => {
         const sectionTop = section.getBoundingClientRect().top
 
         if (sectionTop <= window.innerHeight / 2 && !isAnimationRunning) {
-            anima_numero_progetti(12, document.querySelector(".progetti-pubblicati-numero"))
-            anima_numero_progetti(30, document.querySelector(".progetti-sviluppati-numero"))
-            anima_numero_progetti(6, document.querySelector(".progetti-iconici-numero"))
-            anima_numero_progetti(10, document.querySelector(".progetti-webapp-numero"))
+            anima_numero_progetti(13, document.querySelector(".progetti-pubblicati-numero"))
+            anima_numero_progetti(31, document.querySelector(".progetti-sviluppati-numero"))
+            anima_numero_progetti(7, document.querySelector(".progetti-iconici-numero"))
+            anima_numero_progetti(11, document.querySelector(".progetti-webapp-numero"))
 
             isAnimationRunning = true
         }
